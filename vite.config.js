@@ -15,12 +15,17 @@ const buildContext = () => {
     const jobs_raw = JSON.parse(fs.readFileSync(resolve(data_dir, 'jobs.json'), 'utf-8'));
 
     // Ajouter les méta-données du layout pour le template Handlebars
-    const projects = projects_raw.map(p => ({ ...p, layout: 'left', is_project: true }));
-    const jobs = jobs_raw.map(j => ({ ...j, layout: 'right', is_job: true }));
+    const projects = projects_raw.map(p => ({ ...p, is_project: true }));
+    const jobs = jobs_raw.map(j => ({ ...j, is_job: true }));
 
     // Fusionner les tableaux et les trier par 'sort_date'
     const timeline = [...projects, ...jobs].sort((a, b) => {
         return b.sort_date.localeCompare(a.sort_date);
+    });
+
+    // Alterner dynamiquement gauche/droite
+    timeline.forEach((item, index) => {
+        item.layout = (index % 2 === 0) ? 'left' : 'right';
     });
 
     return { stack, timeline };
