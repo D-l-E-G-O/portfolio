@@ -1,6 +1,16 @@
-<article class="project">
-    <h3>{{title}}</h3>
-    <p>{{description}}</p>
-    <p><strong>Technologies:</strong> {{tech}}</p>
-    <a href="{{repo}}" target="_blank">Code source</a>
+<article class="project-card">
+    <div class="project-content">
+        <h3 class="project-title">{{title}}</h3>
+        <p class="project-desc">{{description}}</p>
+
+        <ul class="project-tech-list" aria-label="Technologies utilisées">
+            {{#each tech}}
+            <li class="tech-tag">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="project-actions">
+        <a href="{{repo}}" target="_blank" rel="noopener noreferrer" class="btn-link">Voir le code</a>
+    </div>
 </article>

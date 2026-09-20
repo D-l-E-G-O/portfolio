@@ -18,7 +18,7 @@ export default defineConfig({
             // Directory qui contient les composants HTML
             partialDirectory: resolve(__dirname, 'src/partials'),
             // Injecter le JSON dans les templates
-            context: data_read()
+            context: () => data_read()
         })
     ]
 });

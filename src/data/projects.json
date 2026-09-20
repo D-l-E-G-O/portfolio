@@ -3,8 +3,19 @@
         {
             "title": "Threadmaze",
             "description": "Jeu de labyrinthe avec solveur dans le terminal.",
-            "tech": "C",
+            "tech": [
+                "C"
+            ],
             "repo": "https://github.com/D-l-E-G-O/Threadmaze"
+        },
+        {
+            "title": "Barricade",
+            "description": "Jeu de platteau inspiré de Quoridor implementé en TypeScript avec React.",
+            "tech": [
+                "TypeScript",
+                "React"
+            ],
+            "repo": "https://github.com/D-l-E-G-O/Barricade"
         }
     ]
 }
