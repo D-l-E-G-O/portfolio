@@ -1,0 +1,19 @@
+[
+    {
+        "sort_date": "2026-04",
+        "company": "InSimo",
+        "location": "Strasbourg",
+        "date": "Avril 2026",
+        "duration": "10 semaines",
+        "contract": "Stage",
+        "subject": "Mise en place d'un système de benchmark pour simulateurs médicaux Unity",
+        "tech": [
+            "C#",
+            "Unity",
+            "Python",
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ]
+    }
+]

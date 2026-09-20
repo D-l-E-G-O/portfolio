@@ -1,0 +1,35 @@
+<div class="timeline-item {{layout}}">
+    <article class="timeline-content">
+
+        {{#if is_job}}
+        <!-- Layout pour les expériences professionnelles -->
+        <span class="card-date">{{date}} • {{duration}}</span>
+        <h3 class="card-title">{{subject}} chez {{company}}</h3>
+
+        <div class="job-meta">
+            <span class="job-contract">{{contract}}</span>
+            <span class="job-location">{{location}}</span>
+        </div>
+        {{else}}
+        <!-- Layout pour les projets -->
+        <span class="card-date">{{date}}</span>
+        <h3 class="card-title">{{title}}</h3>
+        <p class="card-desc">{{description}}</p>
+        {{/if}}
+
+        <!-- Technologies -->
+        {{#if tech}}
+        <ul class="card-tech-list" aria-label="Technologies utilisées">
+            {{#each tech}}
+            <li class="card-tech-badge">{{this}}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+
+        <!-- Liens vers les repo -->
+        {{#if repo}}
+        <a href="{{repo}}" target="_blank" rel="noopener noreferrer" class="card-link">Voir le code</a>
+        {{/if}}
+
+    </article>
+</div>

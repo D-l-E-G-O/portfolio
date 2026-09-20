@@ -1,0 +1,55 @@
+/* Section de présentation avec photo de profil, nom + prénom et présentation */
+.presentation-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+/* Place l'image et le texte côte à côte */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 900px;
+}
+
+/* Force la taille de l'image pour qu'elle soit parfaite */
+.profile-image {
+    width: 320px;
+    height: 320px;
+    /* Recadre l'image proprement si elle n'est pas carrée */
+    object-fit: cover;
+    /* Transforme l'image en cercle parfait */
+    border-radius: 50%;
+    /* Interdit au navigateur d'écraser l'image si le texte est long */
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+/* Structure le bloc de texte */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.profile-presentation {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+}
+
+/* Gère l'affichage sur téléphone */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
