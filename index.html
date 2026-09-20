@@ -7,11 +7,22 @@
     <!-- SEO : Description de la page pour les moteurs de recherche -->
     <meta name="description"
         content="Portfolio de Diego Aparicio, étudiant en 3ème année de BUT Informatique à l'IUT d'Illkirch. Découvrez mes projets en développement logiciel, mes expériences et mon parcours professionnel.">
-    <title>Portfolio Diego Aparicio</title>
+    <title>Diego Aparicio</title>
     <link rel="stylesheet" href="/src/assets/css/main.css">
 </head>
 
+<!-- Script pour éviter le flash blanc -->
+<script>
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+
 <body>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">Thème</button>
     <main>
         <header class="presentation-section">
             <div class="profile-container">
@@ -22,6 +33,21 @@
                     <p class="profile-presentation">
                         Développeur d'applications en 3ème année de BUT Informatique à l'IUT Robert Schuman (Illkirch).
                     </p>
+                    <div class="social-links">
+                        <a href="https://github.com/D-l-E-G-O" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <img src="/src/assets/icons/github.svg" alt="GitHub" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/diego-aparicio-a92a083a8/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img src="/src/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon no-invert"
+                                fill="currentColor">
+                        </a>
+                        <a href="/portfolio/src/assets/files/CV_Diego_APARICIO.pdf" target="_blank"
+                            rel="noopener noreferrer" aria-label="Mon CV">
+                            <img src="/src/assets/icons/cv.svg" alt="Curriculum Vitae" class="social-icon">
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -31,13 +57,13 @@
 
             <div class="stack-category" aria-label="Langages de programmation">
                 {{#each stack.languages}}
-                <span class="tech-badge">{{this}}</span>
+                <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
                 {{/each}}
             </div>
 
             <div class="stack-category" aria-label="Outils et Frameworks">
                 {{#each stack.tools}}
-                <span class="tech-badge">{{this}}</span>
+                <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
                 {{/each}}
             </div>
         </section>
@@ -56,6 +82,8 @@
         <h2 class="contact-title">Prêt à collaborer ?</h2>
         <a href="mailto:diego.aparicio@etu.unistra.fr" class="btn-contact">Me contacter</a>
     </footer>
+
+    <script type="module" src="/src/assets/js/theme.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,74 @@
 [
     {
-        "sort_date": "2025-12",
+        "sort_date": "2024-11",
+        "title": "SAE-Sudoku",
+        "date": "Novembre 2024",
+        "duration": "3 semaines",
+        "devs": 1,
+        "description": "Solveur de grille de sudoku en assembleur. Projet de 1ère année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "Assembleur MIPS32"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/SAE-Sudoku"
+    },
+    {
+        "sort_date": "2025-05",
+        "title": "SAE-Caserne",
+        "date": "Mai 2025",
+        "duration": "2 mois",
+        "devs": 3,
+        "description": "Application de gestion d'une base de données pour une caserne de pompiers. Projet de fin de 1ère année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "C#",
+            "Visual Studio",
+            "SQLite"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/SAE-Caserne"
+    },
+    {
+        "sort_date": "2025-05",
+        "title": "DOOnjons-et-Dragons",
+        "date": "Mai 2025",
+        "duration": "2 mois",
+        "devs": 2,
+        "description": "Jeu Donjons & Dragons sur le terminal. Projet de fin de 1ère année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "Java"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/DOOnjons-et-Dragons"
+    },
+    {
+        "sort_date": "2025-05",
+        "title": "SAE-Simulation-Reseau",
+        "date": "Mai 2025",
+        "duration": "2 mois",
+        "devs": 2,
+        "description": "Simulateur de réseau informatique LAN sur le terminal. Projet de fin de 1ère année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "C"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/SAE-Simulation-Reseau"
+    },
+    {
+        "sort_date": "2025-09",
+        "title": "Audit-or-Die",
+        "date": "Septembre 2025",
+        "duration": "4 mois",
+        "devs": 2,
+        "description": "Jeu de type Clicker incrémental de gestion d'un cabinet d'audit. Projet de 2e année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "GDScript",
+            "Godot",
+            "UML"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/Audit-or-Die"
+    },
+    {
+        "sort_date": "2025-09",
         "title": "Threadmaze",
-        "date": "Décembre 2025",
+        "date": "Septembre 2025",
+        "duration": "4 mois",
+        "devs": 1,
         "description": "Jeu de labyrinthe avec solveur dans le terminal.",
         "tech": [
             "C"
@@ -10,9 +76,40 @@
         "repo": "https://github.com/D-l-E-G-O/Threadmaze"
     },
     {
+        "sort_date": "2025-12",
+        "title": "SAE-2048",
+        "date": "Décembre 2025",
+        "duration": "4 mois",
+        "devs": 3,
+        "description": "Jeu du 2048 dans le terminal. Projet de 2e année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "C"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/SAE-2048"
+    },
+    {
+        "sort_date": "2026-03",
+        "title": "Android-Books-Client",
+        "date": "Mars 2026",
+        "duration": "1 mois",
+        "devs": 2,
+        "description": "Client mobile Android pour une API React de gestion de livres. Projet de fin de 2e année de BUT Informatique à l'IUT d'Illkirch.",
+        "tech": [
+            "TypeScript",
+            "React",
+            "Java",
+            "Android Studio",
+            "SQLite",
+            "Postman"
+        ],
+        "repo": "https://github.com/D-l-E-G-O/Android-Books-Client"
+    },
+    {
         "sort_date": "2026-07",
         "title": "Barricade",
         "date": "Juillet 2026",
+        "duration": "5 jours",
+        "devs": 1,
         "description": "Jeu de platteau inspiré de Quoridor implementé en TypeScript avec React.",
         "tech": [
             "TypeScript",

@@ -1,5 +1,7 @@
 /* Layout de frise chronologique verticale */
 .timeline {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
 }
@@ -17,18 +19,16 @@
 }
 
 .timeline-item {
-    padding: 0 40px;
     position: relative;
-    width: 50%;
-    margin-bottom: 3rem;
+    width: calc(50% - 3rem);
 }
 
 .timeline-item.left {
-    left: 0;
+    align-self: flex-start;
 }
 
 .timeline-item.right {
-    left: 50%;
+    align-self: flex-end;
 }
 
 /* Marker en forme de cercle sur la frise */
@@ -46,11 +46,11 @@
 
 /* Repositioner les markers en fonction de la gauche ou de la droite */
 .timeline-item.left::after {
-    right: -12px;
+    right: calc(-3rem - 10px);
 }
 
 .timeline-item.right::after {
-    left: -12px;
+    left: calc(-3rem - 10px);
 }
 
 /* Pour mobile */
@@ -61,14 +61,13 @@
     }
 
     .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        padding-left: 60px;
-        padding-right: 0;
+        width: calc(100% - 60px);
+        align-self: flex-end !important;
     }
 
     .timeline-item.left::after,
     .timeline-item.right::after {
-        left: 10px;
+        right: auto;
+        left: -48px;
     }
 }

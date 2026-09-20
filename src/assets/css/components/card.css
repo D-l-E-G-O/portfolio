@@ -12,6 +12,7 @@
 .timeline-content:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transition: background-color 0.6s ease;
 }
 
 .card-date {
@@ -26,9 +27,26 @@
     margin-bottom: 0.75rem;
 }
 
+.card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
 .card-desc {
     color: var(--color-text-muted);
     margin-bottom: 1.5rem;
+}
+
+.card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-badges .tech-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
 }
 
 .card-link {
@@ -45,6 +63,15 @@
     background: var(--color-primary-hover);
 }
 
+/* Style spécifique pour les projets */
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
 /* Style spécifique pour les expériences pro */
 .job-meta {
     display: flex;
@@ -52,6 +79,16 @@
     margin-bottom: 1rem;
     font-size: 0.9rem;
     color: var(--color-text-muted);
+}
+
+.job-company {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a.job-company:hover {
+    color: var(--color-primary-hover);
 }
 
 .job-contract {

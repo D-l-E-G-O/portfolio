@@ -3,11 +3,14 @@
 
         {{#if is_job}}
         <!-- Layout pour les expériences professionnelles -->
-        <span class="card-date">{{date}} • {{duration}}</span>
-        <h3 class="card-title">{{subject}} chez {{company}}</h3>
+        <span class="card-date">{{date}}</span>
+        <h3 class="card-title">{{subject}}</h3>
+        <h3 class="card-subtitle">
+            Chez : <a class="job-company" href="https://www.insimo.com/fr/">{{company}}</a>
+        </h3>
 
         <div class="job-meta">
-            <span class="job-contract">{{contract}}</span>
+            <span class="job-contract">{{contract}} de {{duration}}</span>
             <span class="job-location">{{location}}</span>
         </div>
         {{else}}
@@ -15,20 +18,24 @@
         <span class="card-date">{{date}}</span>
         <h3 class="card-title">{{title}}</h3>
         <p class="card-desc">{{description}}</p>
+        <div class="project-meta">
+            <span>Durée : {{duration}}</span>
+            <span>{{devs}} développeur(s)</span>
+        </div>
         {{/if}}
 
         <!-- Technologies -->
         {{#if tech}}
-        <ul class="card-tech-list" aria-label="Technologies utilisées">
+        <div class="card-badges" aria-label="Technologies utilisées">
             {{#each tech}}
-            <li class="card-tech-badge">{{this}}</li>
+            <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
             {{/each}}
-        </ul>
+        </div>
         {{/if}}
 
         <!-- Liens vers les repo -->
         {{#if repo}}
-        <a href="{{repo}}" target="_blank" rel="noopener noreferrer" class="card-link">Voir le code</a>
+        <a href="{{repo}}" target="_blank" rel="noopener noreferrer" class="card-link">Voir le projet</a>
         {{/if}}
 
     </article>
