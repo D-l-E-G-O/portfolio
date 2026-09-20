@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Diego Aparicio</title>
+</head>
+
+<body>
+    <h1>Mes Projets</h1>
+    <div class="projects-grid">
+        {{#each projects}}
+        {{> project-card this}}
+        {{/each}}
+    </div>
+</body>
+
+</html>

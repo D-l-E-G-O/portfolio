@@ -1,0 +1,10 @@
+{
+    "projects": [
+        {
+            "title": "Threadmaze",
+            "description": "Jeu de labyrinthe avec solveur dans le terminal.",
+            "tech": "C",
+            "repo": "https://github.com/D-l-E-G-O/Threadmaze"
+        }
+    ]
+}
