@@ -8,21 +8,32 @@ const buildContext = () => {
     const data_dir = resolve(__dirname, 'src/data');
 
     const stack = JSON.parse(fs.readFileSync(resolve(data_dir, 'stack.json'), 'utf-8'));
+    const color_map = {};
+    [...stack.languages, ...stack.tools].forEach(tech => {
+        color_map[tech.name] = tech.color;
+    });
+    const tech_format = (tech_name) => ({
+        name: tech_name,
+        color: color_map[tech_name] || "var(--color-primary)" // Fallback
+    });
+
     const projects_raw = JSON.parse(fs.readFileSync(resolve(data_dir, 'projects.json'), 'utf-8'));
     const jobs_raw = JSON.parse(fs.readFileSync(resolve(data_dir, 'jobs.json'), 'utf-8'));
 
-    // Ajouter les méta-données du layout pour le template Handlebars
-    const projects = projects_raw.map(p => ({ ...p, is_project: true }));
-    const jobs = jobs_raw.map(j => ({ ...j, is_job: true }));
+    // Fusionner et trier les tableaux en ajoutant les méta-données du layout pour le template Handlebars
+    const timeline_raw = [
+        ...projects_raw.map(p => ({ ...p, is_project: true })),
+        ...jobs_raw.map(j => ({ ...j, is_job: true }))
+    ].sort((a, b) => b.sort_date.localeCompare(a.sort_date));
 
-    // Fusionner les tableaux et les trier par 'sort_date'
-    const timeline = [...projects, ...jobs].sort((a, b) => {
-        return b.sort_date.localeCompare(a.sort_date);
-    });
-
-    // Alterner dynamiquement gauche/droite
-    timeline.forEach((item, index) => {
+    // Alterner dynamiquement gauche/droite et appliquer le formatage des technologies
+    const timeline = timeline_raw.map((item, index) => {
         item.layout = (index % 2 === 0) ? 'left' : 'right';
+
+        if (item.tech) {
+            item.tech = item.tech.map(tech_format);
+        }
+        return item;
     });
 
     return { stack, timeline };

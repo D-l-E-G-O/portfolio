@@ -28,7 +28,7 @@
         {{#if tech}}
         <div class="card-badges" aria-label="Technologies utilisées">
             {{#each tech}}
-            <span class="tech-badge">{{this}}</span>
+            <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
             {{/each}}
         </div>
         {{/if}}

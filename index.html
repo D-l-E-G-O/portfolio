@@ -42,13 +42,13 @@
 
             <div class="stack-category" aria-label="Langages de programmation">
                 {{#each stack.languages}}
-                <span class="tech-badge">{{this}}</span>
+                <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
                 {{/each}}
             </div>
 
             <div class="stack-category" aria-label="Outils et Frameworks">
                 {{#each stack.tools}}
-                <span class="tech-badge">{{this}}</span>
+                <span class="tech-badge" style="--badge-color: {{color}}">{{name}}</span>
                 {{/each}}
             </div>
         </section>
