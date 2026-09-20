@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="/src/assets/css/main.css">
 </head>
 
+<!-- Script pour éviter le flash blanc -->
+<script>
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+
 <body>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">Thème</button>
     <main>
         <header class="presentation-section">
             <div class="profile-container">
@@ -56,6 +67,8 @@
         <h2 class="contact-title">Prêt à collaborer ?</h2>
         <a href="mailto:diego.aparicio@etu.unistra.fr" class="btn-contact">Me contacter</a>
     </footer>
+
+    <script type="module" src="/src/assets/js/theme.js"></script>
 </body>
 
 </html>

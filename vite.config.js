@@ -3,10 +3,7 @@ import handlebars from 'vite-plugin-handlebars';
 import { resolve } from 'path';
 import fs from 'fs';
 
-/** 
- * Lit, fusionne et tri les données de la frise chronologique depuis différents fichiers JSON. 
- * @return {Object} L'objet contenant le contexte de la stack et de la frise. 
- */
+// Lit, fusionne et tri les données de la frise chronologique depuis différents fichiers JSON. 
 const buildContext = () => {
     const data_dir = resolve(__dirname, 'src/data');
 
