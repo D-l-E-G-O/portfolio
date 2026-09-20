@@ -1,0 +1,17 @@
+/* Main layout de la grille et espacement des sections */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Titres de section réutilisables */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}

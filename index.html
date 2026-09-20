@@ -4,16 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO : Description de la page pour les moteurs de recherche -->
+    <meta name="description"
+        content="Portfolio de Diego Aparicio, étudiant en 3ème année de BUT Informatique à l'IUT d'Illkirch. Découvrez mes projets en développement logiciel, mes expériences et mon parcours professionnel.">
     <title>Portfolio Diego Aparicio</title>
+    <link rel="stylesheet" href="/src/assets/css/main.css">
 </head>
 
 <body>
-    <h1>Mes Projets</h1>
-    <div class="projects-grid">
-        {{#each projects}}
-        {{> project-card this}}
-        {{/each}}
-    </div>
+    <main>
+        <header class="presentation-section">
+            <div class="profile-container">
+                <img src="/src/assets/images/Diego.png" alt="Photo de profil" class="profile-image">
+
+                <div class="profile-content">
+                    <h1 class="profile-name">Diego Aparicio</h1>
+                    <p class="profile-presentation">
+                        Développeur d'applications en 3ème année de BUT Informatique à l'IUT Robert Schuman (Illkirch).
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="stack-section" aria-labelledby="stack-title">
+            <h2 id="stack-title" class="section-title">Ma Stack Technique</h2>
+
+            <div class="stack-category" aria-label="Langages de programmation">
+                {{#each stack.languages}}
+                <span class="tech-badge">{{this}}</span>
+                {{/each}}
+            </div>
+
+            <div class="stack-category" aria-label="Outils et Frameworks">
+                {{#each stack.tools}}
+                <span class="tech-badge">{{this}}</span>
+                {{/each}}
+            </div>
+        </section>
+
+        <section aria-labelledby="timeline-title">
+            <h2 id="timeline-title" class="section-title">Mes Projets & Expériences</h2>
+            <div class="timeline">
+                {{#each timeline}}
+                {{> timeline-item this}}
+                {{/each}}
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact-footer">
+        <h2 class="contact-title">Prêt à collaborer ?</h2>
+        <a href="mailto:diego.aparicio@etu.unistra.fr" class="btn-contact">Me contacter</a>
+    </footer>
 </body>
 
 </html>

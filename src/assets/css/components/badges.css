@@ -1,0 +1,32 @@
+/* Section avec les badges pour les techno que je maîtrise */
+.stack-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Grouper les badges par catégories */
+.stack-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.tech-badge {
+    background: #e2e8f0;
+    color: #475569;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+    cursor: default;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    background: var(--color-primary);
+    color: white;
+}

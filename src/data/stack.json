@@ -1,0 +1,20 @@
+{
+    "languages": [
+        "C",
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "Java",
+        "C#",
+        "PHP",
+        "GDScript"
+    ],
+    "tools": [
+        "Linux",
+        "Docker",
+        "Git",
+        "React",
+        "Godot Engine",
+        "Android"
+    ]
+}
