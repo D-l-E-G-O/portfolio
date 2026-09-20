@@ -53,3 +53,25 @@
         gap: 1.5rem;
     }
 }
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.social-links a:hover .social-icon {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+[data-theme="dark"] .social-icon:not(.no-invert) {
+    filter: invert(1) brightness(2);
+}
