@@ -6,15 +6,30 @@
         "JavaScript",
         "Java",
         "C#",
+        "SQLite",
         "PHP",
-        "GDScript"
+        "GDScript",
+        "HTML",
+        "CSS",
+        "UML",
+        "Assembleur MIPS32",
+        "Bash"
     ],
     "tools": [
-        "Linux",
+        "Linux/Windows",
         "Docker",
         "Git",
         "React",
+        "Visual Studio",
         "Godot Engine",
-        "Android"
+        "Unity",
+        "Android Studio",
+        "Postman",
+        "GitHub/GitLab",
+        "Laravel",
+        "IntelliJ",
+        "Vim",
+        "Trello",
+        "Oracle"
     ]
 }
