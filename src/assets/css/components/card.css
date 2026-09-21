@@ -6,7 +6,9 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    /* Empêche l'image de dépasser des coins arrondis */
+    overflow: hidden;
 }
 
 .timeline-content:hover {
@@ -94,4 +96,31 @@ a.job-company:hover {
 .job-contract {
     font-weight: 600;
     color: var(--color-text);
+}
+
+/* Style de l'illustration du projet */
+.card-image {
+    /* Annule le padding du conteneur parent pour toucher les bords */
+    margin: -1.5rem -1.5rem 0 -1.5rem;
+    /* Compense les marges négatives */
+    width: calc(100% + 3rem);
+    height: auto;
+    max-width: none;
+
+    /* Force un format 16:9 */
+    aspect-ratio: 16 / 9;
+    /* Recadre sans déformer si l'image n'est pas 16:9 */
+    object-fit: cover;
+
+    /* Arrondit uniquement les coins supérieurs pour suivre la forme de la carte */
+    border-radius: var(--radius) var(--radius) 0 0;
+
+    /* Couleur de fond pendant le chargement */
+    background-color: var(--color-bg);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Ajustement de la bordure en Dark mode */
+[data-theme="dark"] .card-image {
+    border-bottom: 1px solid #334155;
 }

@@ -1,6 +1,12 @@
 <div class="timeline-item {{layout}}">
     <article class="timeline-content">
 
+        <!-- L'image s'affiche uniquement si elle existe dans le JSON -->
+        {{#if image}}
+        <img src="{{image}}" alt="Illustration du projet {{title}}" class="card-image" loading="lazy" width="600"
+            height="337">
+        {{/if}}
+
         {{#if is_job}}
         <!-- Layout pour les expériences professionnelles -->
         <span class="card-date">{{date}}</span>
@@ -15,7 +21,7 @@
         </div>
         {{else}}
         <!-- Layout pour les projets -->
-        <span class="card-date">{{date}}</span>
+        <span class="card-date" {{#if image}}style="margin-top: 1rem;" {{/if}}>{{date}}</span>
         <h3 class="card-title">{{title}}</h3>
         <p class="card-desc">{{description}}</p>
         <div class="project-meta">

@@ -9,7 +9,8 @@
         "tech": [
             "Assembleur MIPS32"
         ],
-        "repo": "https://github.com/D-l-E-G-O/SAE-Sudoku"
+        "repo": "https://github.com/D-l-E-G-O/SAE-Sudoku",
+        "image": "src/assets/images/SAE-Sudoku.webp"
     },
     {
         "sort_date": "2025-05",
@@ -23,7 +24,8 @@
             "Visual Studio",
             "SQLite"
         ],
-        "repo": "https://github.com/D-l-E-G-O/SAE-Caserne"
+        "repo": "https://github.com/D-l-E-G-O/SAE-Caserne",
+        "image": "src/assets/images/SAE-Caserne.webp"
     },
     {
         "sort_date": "2025-05",
@@ -35,7 +37,8 @@
         "tech": [
             "Java"
         ],
-        "repo": "https://github.com/D-l-E-G-O/DOOnjons-et-Dragons"
+        "repo": "https://github.com/D-l-E-G-O/DOOnjons-et-Dragons",
+        "image": "src/assets/images/DOOnjons-et-Dragons.webp"
     },
     {
         "sort_date": "2025-05",
@@ -47,7 +50,8 @@
         "tech": [
             "C"
         ],
-        "repo": "https://github.com/D-l-E-G-O/SAE-Simulation-Reseau"
+        "repo": "https://github.com/D-l-E-G-O/SAE-Simulation-Reseau",
+        "image": "src/assets/images/SAE-Simulation-Reseau.webp"
     },
     {
         "sort_date": "2025-09",
@@ -61,7 +65,8 @@
             "Godot",
             "UML"
         ],
-        "repo": "https://github.com/D-l-E-G-O/Audit-or-Die"
+        "repo": "https://github.com/D-l-E-G-O/Audit-or-Die",
+        "image": "src/assets/images/Audit-or-Die.webp"
     },
     {
         "sort_date": "2025-09",
@@ -73,7 +78,8 @@
         "tech": [
             "C"
         ],
-        "repo": "https://github.com/D-l-E-G-O/Threadmaze"
+        "repo": "https://github.com/D-l-E-G-O/Threadmaze",
+        "image": "src/assets/images/Threadmaze.webp"
     },
     {
         "sort_date": "2025-12",
@@ -85,7 +91,8 @@
         "tech": [
             "C"
         ],
-        "repo": "https://github.com/D-l-E-G-O/SAE-2048"
+        "repo": "https://github.com/D-l-E-G-O/SAE-2048",
+        "image": "src/assets/images/SAE-2048.webp"
     },
     {
         "sort_date": "2026-03",
@@ -102,7 +109,8 @@
             "SQLite",
             "Postman"
         ],
-        "repo": "https://github.com/D-l-E-G-O/Android-Books-Client"
+        "repo": "https://github.com/D-l-E-G-O/Android-Books-Client",
+        "image": "src/assets/images/Android-Books-Client.webp"
     },
     {
         "sort_date": "2026-07",
@@ -115,6 +123,7 @@
             "TypeScript",
             "React"
         ],
-        "repo": "https://github.com/D-l-E-G-O/Barricade"
+        "repo": "https://github.com/D-l-E-G-O/Barricade",
+        "image": "src/assets/images/Barricade.webp"
     }
 ]
