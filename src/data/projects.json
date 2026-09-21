@@ -121,7 +121,8 @@
         "description": "Jeu de platteau inspiré de Quoridor implementé en TypeScript avec React.",
         "tech": [
             "TypeScript",
-            "React"
+            "React",
+            "Vite"
         ],
         "repo": "https://github.com/D-l-E-G-O/Barricade",
         "image": "src/assets/images/Barricade.webp"
