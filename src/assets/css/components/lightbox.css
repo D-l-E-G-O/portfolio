@@ -1,0 +1,55 @@
+/* Modifie le curseur sur les images des projets pour indiquer qu'on peut cliquer */
+.card-image {
+    cursor: zoom-in;
+}
+
+/* Style global de la modale */
+.lightbox {
+    border: none;
+    border-radius: var(--radius);
+    padding: 0;
+    background: transparent;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+}
+
+/* Le fond sombre (géré nativement par la balise dialog) */
+.lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+/* L'image en plein écran */
+.lightbox img {
+    max-width: 100%;
+    /* Empêche l'image de dépasser de l'écran en hauteur */
+    max-height: 90vh;
+    display: block;
+    border-radius: var(--radius);
+    object-fit: contain;
+}
+
+/* Le bouton de fermeture */
+#close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-modal:hover {
+    background: var(--color-primary);
+    transform: scale(1.1);
+}
