@@ -28,6 +28,7 @@
 
 /* Structure le bloc de texte */
 .profile-content {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
 }
@@ -51,6 +52,10 @@
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+    }
+
+    .profile-content {
+        margin-top: 2rem;
     }
 }
 
